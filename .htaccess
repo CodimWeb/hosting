@@ -1,0 +1,9 @@
+# REDIRECT to public
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+
+# OR REDIRECT to public v2
+#RewriteEngine on
+#RewriteRule ^$ public/ [L]
+#RewriteRule ((?s).*) public/$1 [L]

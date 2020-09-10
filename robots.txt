@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+Disallow: /go/
+Disallow: /go/*
+
+Host: https://hosting-for-site.ru

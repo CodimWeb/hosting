@@ -1,0 +1,43 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateHostingsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('hostings', function (Blueprint $table) {
+            $table->id();
+            $table->string('hosting_url');
+            $table->string('hosting_name');
+            $table->string('logo');
+            $table->string('small_logo');
+            $table->text('admin_voice');
+            $table->string('filters');
+            $table->string('price');
+            $table->float('rating');
+            $table->float('rating_usability');
+            $table->float('rating_satisfaction');
+            $table->float('rating_money');
+            $table->float('rating_quality');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('hostings');
+    }
+}
